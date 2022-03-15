@@ -2,31 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>StudyLab</title>
+    <title>{{request.session.title}}</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-
     <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
-
-    
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><span>Study</span>Lab</a>
+        <a class="navbar-brand" href="index.html"><img width="60" height="50" src="{{request.session.logo}}">{{request.session.title}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
       </button>
@@ -34,12 +28,11 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="{% url 'List_Courses' %}" class="nav-link">Course</a></li>
+            <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Sobre Nosotros</a></li>
+            <li class="nav-item"><a href="{% url 'List_Courses' %}" class="nav-link">Cursos</a></li>
             <!-- <li class="nav-item"><a href="instructor.html" class="nav-link">Instructor</a></li> -->
             <li class="nav-item"><a href="{% url 'Blog' %}" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="{% url 'Single' %}" class="nav-link">Blog Single</a></li>
-            <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contacto</a></li>
         </ul>
     </div>
    </div>
@@ -51,7 +44,7 @@
     <div class="row mb-5">
       <div class="col-md pt-5">
         <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">About</h2>
+          <h2 class="ftco-heading-2">Sobre Nosotros</h2>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
           <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
             <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -61,7 +54,7 @@
     </div>
 </div>
 <div class="col-md pt-5">
-    <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+  <!-- <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
       <h2 class="ftco-heading-2">Help Desk</h2>
       <ul class="list-unstyled">
         <li><a href="#" class="py-2 d-block">Customer Care</a></li>
@@ -71,10 +64,10 @@
         <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
         <li><a href="#" class="py-2 d-block">Call Us</a></li>
     </ul>
-</div>
+  </div> -->
 </div>
 <div class="col-md pt-5">
-   <div class="ftco-footer-widget pt-md-5 mb-4">
+   <!-- <div class="ftco-footer-widget pt-md-5 mb-4">
       <h2 class="ftco-heading-2">Recent Courses</h2>
       <ul class="list-unstyled">
         <li><a href="#" class="py-2 d-block">Computer Engineering</a></li>
@@ -84,11 +77,11 @@
         <li><a href="#" class="py-2 d-block">Computer Technician</a></li>
         <li><a href="#" class="py-2 d-block">Web Developer</a></li>
     </ul>
-</div>
+  </div> -->
 </div>
 <div class="col-md pt-5">
     <div class="ftco-footer-widget pt-md-5 mb-4">
-       <h2 class="ftco-heading-2">Have a Questions?</h2>
+       <h2 class="ftco-heading-2">¿Tiene preguntas?</h2>
        <div class="block-23 mb-3">
          <ul>
            <li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
